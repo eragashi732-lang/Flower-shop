@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+        <img src="../assets/img/photo-1588874133473-d6d9c9dd4f31 1.png" alt="">
+        <form id="logInForm">
+            <h1 class="">Log In</h1>
+            <input id="emailLogin" type="email" placeholder="Email" aria-live="polite">
+            <input id="passwordLogin" type="password" placeholder="Password" minlength="8" aria-live="polite">
+
+            <p class="fSize12px">Don't have an account yet? <span><a href="../Sign in/signIn.html">Register
+                        here.</a></span></p>
+            <button type="submit" class="customButton">LOG IN</button>
+        </form>
+
+    </main>
+
+
+
+    <script>
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&._-])[A-Za-z\d@$!%*?&._-]{8,}$/;
+
+        const emailInput = document.getElementById("emailLogin");
+        const passwordInput = document.getElementById("passwordLogin");
+        const form = document.getElementById("logInForm");
+
+        const emailError = document.getElementById("emailError");
+        const passwordError = document.getElementById("passwordError");
+        emailInput.addEventListener("input", () => {
+            emailError.textContent = "";
+        });
+
+        passwordInput.addEventListener("input", () => {
+            passwordError.textContent = "";
+        });
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            let email = emailInput.value.trim();
+            let password = passwordInput.value.trim();
+            let valid = true;
+
+            if (!emailRegex.test(email)) {
+                emailError.innerHTML = "Please enter a valid email address.";
+                emailError.style.color = 'red'
+                emailError.style.fontSize = '10px'
+
+                valid = false;
+            } else {
+                emailError.innerHTML = "";
+            }
+
+            if (!passwordRegex.test(password)) {
+                passwordError.innerHTML =
+                    "Your password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a number, and a special character.";
+                passwordError.style.color = 'red'
+                passwordError.style.fontSize = '10px'
+
+
+                valid = false;
+            } else {
+                passwordError.innerHTML = "";
+            }
+
+            if (valid) {
+            }
+        });
+
+    </script>
+
+
+</body>
+
+</html>

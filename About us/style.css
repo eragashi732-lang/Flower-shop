@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0;
+}
+
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    height: auto;
+    min-height: calc(100vh - 150px);
+    align-items: center;
+}
+
+main img {
+    width: 100%;
+}
+
+.mainContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.mainContent p {
+    width: 80%;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.mainContent button {
+    height: 30%;
+    background-color: black;
+    color: white;
+    border-radius: 44px;
+    font-family: 'Italiana', serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.aboutUs {
+    border-radius: 174px;
+    background-color: #F8DADFCC;
+    color: #D81115;
+    border: #D81115 1px solid;
+    position: absolute;
+    width:
+        533px;
+    height:
+        195px;
+    font-size: 96px;
+    font-weight: 400;
+    bottom: -80px;
+    right: 100px;
+    font-family: 'Italiana', serif;
+}
+
+.imgDiv {
+    position: relative;
+}
