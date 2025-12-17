@@ -3,8 +3,7 @@ body {
 }
 
 .container {
-    height: 90vh;
-    margin: 5vh auto;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: white;
