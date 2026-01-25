@@ -39,3 +39,36 @@ body {
     text-decoration: none;
     font-size: 2rem;
 }
+
+/* HEADER */
+.site-header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-header .logo {
+    font-family: 'Italiana', serif;
+    font-size: 28px;
+    color: #2c2c2c;
+}
+
+.nav-menu a {
+    margin-left: 24px;
+    text-decoration: none;
+    color: #2c2c2c;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #c62828;
+    /* highlight red */
+}
